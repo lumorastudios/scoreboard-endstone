@@ -1,6 +1,5 @@
 # Scoreboard plugin for Endstone.
 # Gives every player their own sidebar scoreboard, fully driven by config.toml.
-# Author: Appolo
 
 from endstone import Player
 from endstone.command import Command, CommandSender
