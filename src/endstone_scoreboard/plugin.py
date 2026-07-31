@@ -3,7 +3,6 @@
 # Structured so other plugins can plug their own placeholders in instead of
 # forking this code - see api.py for the part that matters to them.
 #
-# Author: Appolo
 
 from typing import Dict
 
