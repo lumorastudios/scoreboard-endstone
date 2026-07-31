@@ -2,9 +2,7 @@
 
 Per-player sidebar scoreboard for Endstone (Bedrock) servers, split into
 small modules so other plugins can hook in their own placeholders without
-touching this plugin's code.
-
-Author: **Appolo**
+touching this plugin's code
 
 ## Install
 
