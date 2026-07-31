@@ -1,0 +1,44 @@
+# ==========================================================
+#  Scoreboard - configuration
+#  Author: Appolo
+# ==========================================================
+
+# Master switch. Set to false to turn the whole plugin off
+# without uninstalling it.
+enabled = true
+
+# How often the board refreshes, in server ticks (20 ticks = ~1 second).
+# Lower = more responsive, higher = less server load.
+update-interval-ticks = 20
+
+# Whether the board is shown automatically when a player joins.
+# Players can still flip it with /sb even if this is false.
+show-on-join = true
+
+# Title shown at the top of the board. "&" is used for color codes.
+title = "&e&lMY SERVER"
+
+# Lines shown on the board, top to bottom. Each one supports "&" color
+# codes and the placeholders below. Use an empty string "" for a blank
+# line/spacer.
+#
+# Built-in placeholders:
+#   {player}  - the viewer's name
+#   {online}  - players currently online
+#   {max}     - max player slots
+#   {ping}    - the viewer's ping in ms
+#   {level}   - the viewer's XP level
+#   {tps}     - current server TPS
+#
+# Other plugins can register more placeholders through this plugin's API
+# (see api.py) - once registered they work here the same way, no changes
+# needed in this plugin itself.
+lines = [
+    "&7&m----------------",
+    "&fPlayer: &b{player}",
+    "&fOnline: &a{online}&7/&a{max}",
+    "&fPing: &b{ping}ms",
+    "&fTPS: &b{tps}",
+    "",
+    "&7&m----------------",
+]
