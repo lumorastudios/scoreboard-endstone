@@ -1,13 +1,4 @@
-# Public API for other plugins to hook into the scoreboard.
-#
-# Usage from another plugin's on_enable:
-#
-#   scoreboard = self.server.plugin_manager.get_plugin("scoreboard")
-#   if scoreboard is not None:
-#       scoreboard.api.register_tag("balance", lambda player: str(get_balance(player)))
-#
-# Once registered, {balance} works in config.toml exactly like the built-in
-# tags below - no need to touch this plugin's code at all.
+# Public API for other plugins to hook into the 
 
 from typing import Callable, Dict
 
