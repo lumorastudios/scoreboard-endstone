@@ -1,6 +1,5 @@
 # ==========================================================
 #  Scoreboard - configuration
-#  Author: Appolo
 # ==========================================================
 
 # Master switch. Set to false to turn the whole plugin off
@@ -16,7 +15,7 @@ update-interval-ticks = 20
 show-on-join = true
 
 # Title shown at the top of the board. "&" is used for color codes.
-title = "&e&lMY SERVER"
+title = "&e&lYOUR SERVER"
 
 # Lines shown on the board, top to bottom. Each one supports "&" color
 # codes and the placeholders below. Use an empty string "" for a blank
