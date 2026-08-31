@@ -4,36 +4,6 @@ Per-player sidebar scoreboard for Endstone (Bedrock) servers, split into
 small modules so other plugins can hook in their own placeholders without
 touching this plugin's code.
 
-Author: **Appolo**
-
-## Install
-
-1. From the project root, build the wheel:
-   ```
-   pip install hatch
-   hatch build
-   ```
-2. Grab the `.whl` from `dist/` and drop it in your server's `plugins/` folder.
-3. Start/restart the server.
-
-For development, install straight from source instead:
-```
-pip install -e .
-```
-
-## Code layout
-
-```
-src/endstone_scoreboard/
-├── __init__.py   -> exports ScoreboardPlugin & ScoreboardAPI
-├── plugin.py     -> lifecycle, commands, events, tick loop
-├── api.py        -> placeholder registry other plugins hook into
-├── tags.py       -> built-in placeholders (also doubles as an example)
-├── board.py      -> per-player rendering, only touches lines that changed
-├── stats.py      -> JSON-backed kill/death counters
-└── config.toml   -> default config
-```
-
 ## Configuration
 
 `config.toml` shows up under `plugins/endstone_scoreboard/config.toml`
@@ -45,13 +15,9 @@ after the plugin has run once. Available options:
 - `title` - board title, supports `&` color codes
 - `lines` - board content, supports `&` color codes and placeholders
 
-Built-in placeholders: `{player}`, `{online}`, `{max}`, `{ping}`,
+Placeholders: `{player}`, `{online}`, `{max}`, `{ping}`,
 `{level}`, `{tps}`, `{world_name}`, `{x}` `{y}` `{z}`, `{default_kills}`,
 `{default_death}`.
-
-Kills and deaths are tracked automatically (PvP kills only count towards
-`{default_kills}`; any death counts towards `{default_death}`) and saved
-to `plugins/endstone_scoreboard/stats.json`, so they survive restarts.
 
 ## Commands
 
